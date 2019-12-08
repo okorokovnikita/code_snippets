@@ -1,7 +1,7 @@
 
 class Employee:
 
-    def __init__(self, first, last, pay): #here we define the variables of the class object
+    def __init__(self, first, last, pay): #here we initialize the variables of the class object
         self.first = first
         self.last = last
         self.email = first + '.' + last + '@email.com'
