@@ -7,7 +7,7 @@ class Employee:
         self.email = first + '.' + last + '@email.com' #this is attribute of the class
         self.pay = pay #this is attribute of the class
 
-    def fullname(self):
+    def fullname(self): #this is the method of the class (to print a full name of the object)
         return '{} {}'.format(self.first, self.last)
 
 emp_1 = Employee('Corey', 'Schafer', 50000)
