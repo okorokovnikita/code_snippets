@@ -12,22 +12,22 @@ class Employee:
 
         Employee.num_of_emps += 1
 
-    def fullname(self):
+    def fullname(self): #regular method
         return '{} {}'.format(self.first, self.last)
 
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
 
-    @classmethod
+    @classmethod #class method (takes class as first argument)
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
 
-    @classmethod
+    @classmethod #class method (creating class objects from a string)
     def from_string(cls, emp_str):
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
 
-    @staticmethod
+    @staticmethod #static method (works as basic functions which have logical connections with the class and do not take instamce or th class as the first argument)
     def is_workday(day):
         if day.weekday() == 5 or day.weekday() == 6:
             return False
